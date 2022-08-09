@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <v-main>
         <v-row no-gutters class="fill-height" justify="center">
           <v-col cols="12" sm="4" md="4" class="hidden-sm-and-down">

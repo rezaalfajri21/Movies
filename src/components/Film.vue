@@ -1,5 +1,6 @@
 <template>
     <v-app>
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <v-main>
           <v-container fluid>
             <h1>Account Management</h1>
