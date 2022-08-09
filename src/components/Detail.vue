@@ -70,6 +70,7 @@ export default {
   created () {
     localStorage.removeItem('TOKEN');
     document.title = this.movies.Title + "Detail";
+    this.getDetail();
     console.log(localStorage.IMDBID);
             document.title = "Detail";
             Vue.axios
@@ -86,12 +87,13 @@ export default {
     };
   },
   methods: {
-    login() {
-        console.log('login ni bos');
-        if(this.email=="admin@email.com" && this.password=="admin123"){
-          localStorage.TOKEN=true;
-          this.$router.push('/home');
-        }
+    getDetail() {
+        Vue.axios
+            .get('https://www.omdbapi.com/?apikey=faf7e5bb&i='+ this.$route.params.imdbId +'&plot=full')
+            .then(response =>{
+                this.movies = response.data;
+                console.log(this.movies);
+            });
        
     },
   }
