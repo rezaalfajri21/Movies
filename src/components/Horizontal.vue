@@ -131,7 +131,7 @@ Vue.use(VueAxios, axios)
             loadMore() {
                 this.page = this.page + 1;
                 Vue.axios
-                .get('http://www.omdbapi.com?apikey=faf7e5bb&s=Batman&page=' + this.page)
+                .get('https://www.omdbapi.com?apikey=faf7e5bb&s=Batman&page=' + this.page)
                 .then(response =>{
                     for(var i = 0; i<response.data.Search.length; i++) {
                         this.movies.push(response.data.Search[i]);
