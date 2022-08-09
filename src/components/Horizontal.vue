@@ -115,8 +115,8 @@ Vue.use(VueAxios, axios)
         },
         methods: {
             go(imdbId) {
-                // this.$router.push('/detail/'+imdbId);
-                window.open('detail/'+imdbId);
+                this.$router.push('/detail/'+imdbId);
+                // window.open('detail/'+imdbId, imdbId.href);
             },
             picClicked(movie) {
                 this.card = movie;
