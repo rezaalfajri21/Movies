@@ -279,7 +279,7 @@ Vue.use(VueAxios, axios)
 
     created () {
         Vue.axios
-        .get('http://www.omdbapi.com?apikey=faf7e5bb&s=Batman&page=1')
+        .get('https://www.omdbapi.com?apikey=faf7e5bb&s=Batman&page=1')
         .then(response =>{
             this.movies = response.data.Search;
             console.log(this.movies);

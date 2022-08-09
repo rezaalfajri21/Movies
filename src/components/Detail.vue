@@ -72,7 +72,7 @@ export default {
     console.log(localStorage.IMDBID);
             document.title = "Detail";
             Vue.axios
-            .get('http://www.omdbapi.com/?apikey=faf7e5bb&i='+ this.$route.params.imdbId +'&plot=full')
+            .get('https://www.omdbapi.com/?apikey=faf7e5bb&i='+ this.$route.params.imdbId +'&plot=full')
             .then(response =>{
                 this.movies = response.data;
                 console.log(this.movies);
